@@ -4,9 +4,9 @@ from Utils import config as con
 
 @pytest.fixture(scope="function")
 def test_setup(request):
-    driver = webdriver.Chrome()
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument("--headless")
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    driver = webdriver.Chrome(options=options)
     driver.get(con.url)
     driver.maximize_window()
     request.cls.driver = driver
