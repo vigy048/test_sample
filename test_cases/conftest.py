@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from Utils import config as con
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="class")
 def test_setup(request):
     driver = webdriver.Chrome()
     chrome_options = webdriver.ChromeOptions()
