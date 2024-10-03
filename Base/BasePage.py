@@ -1,3 +1,6 @@
+from threading import Timer
+
+from selenium.common import TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
@@ -11,11 +14,17 @@ class BaseDriver:
 
 
     def click_on_visibility(self, locator):
-        WebDriverWait(self.driver, 40).until(ec.visibility_of_element_located(locator))
-        return WebDriverWait(self.driver, 40).until(ec.element_to_be_clickable(locator)).click()
+        try:
+            WebDriverWait(self.driver, 40).until(ec.visibility_of_element_located(locator))
+            return WebDriverWait(self.driver, 40).until(ec.element_to_be_clickable(locator)).click()
+        except TimeoutException:
+            print("Timeout")
 
     def enter_text(self, locator, text):
-        return WebDriverWait(self.driver, 40).until(ec.visibility_of_element_located(locator)).send_keys(text)
+        try:
+            return WebDriverWait(self.driver, 40).until(ec.visibility_of_element_located(locator)).send_keys(text)
+        except TimeoutException:
+            print("Timeout")
 
     def return_element_text(self, locator):
         return WebDriverWait(self.driver, 40).until(ec.visibility_of_element_located(locator)).text
