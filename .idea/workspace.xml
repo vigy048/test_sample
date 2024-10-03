@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbdf1364-6d95-4dc3-9148-66562d1137a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +38,11 @@
     "Python tests.Python tests for test_logints.TestLogin.test_login_timesheet.executor": "Run",
     "Python.read_excel.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature2",
+    "git-widget-placeholder": "feature",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests for conftest.test_setup">
     <configuration name="Python tests for conftest.test_setup" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pytest_selenium" />
       <option name="ENV_FILES" value="" />
